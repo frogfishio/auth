@@ -1,0 +1,11 @@
+.*
+*.log
+*.rdb
+*.js
+*.map
+!gulpfile.js
+!.gitignore
+
+/dist
+/build
+node_modules
