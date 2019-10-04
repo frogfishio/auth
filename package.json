@@ -1,12 +1,13 @@
 {
-  "name": "auth",
-  "version": "1.0.1",
+  "name": "@frogfish/auth",
+  "version": "1.0.4",
   "description": "Auth Service ============",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp prepare-debug; tsc; mocha --exit --recursive build/debug/test/account",
     "watch": "gulp prepare-debug; tsc -w",
     "build": "gulp build",
+    "clean-build": "gulp clean; gulp build",
     "dist": "gulp build; npm version patch; cd build/release; npm publish --access public"
   },
   "repository": {
