@@ -4,7 +4,10 @@
   "description": "Auth Service ============",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp prepare-debug; tsc; mocha --exit --recursive build/debug/test/account",
+    "watch": "gulp prepare-debug; tsc -w",
+    "build": "gulp build",
+    "dist": "gulp build; npm version patch; cd build/release; npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/frogfishio/auth/issues"
   },
-  "homepage": "https://github.com/frogfishio/auth#readme"
+  "homepage": "https://github.com/frogfishio/auth#readme",
+  "dependencies": {
+    "@frogfish/engine": "^1.0.18"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "mkdirp": "^0.5.1",
+    "typescript": "^3.6.3"
+  }
 }
