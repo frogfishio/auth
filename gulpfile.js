@@ -10,7 +10,7 @@ async function compile() {
   const ts = require('gulp-typescript');
   var tsProject = ts.createProject('./tsconfig.json');
 
-  await src(['src/**/*.ts']).pipe(tsProject().js.pipe(dest('build/release')));
+  await src(['src/**/*.ts']).pipe(tsProject()).js.pipe(dest('build/release'));
 }
 
 async function package() {
