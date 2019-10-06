@@ -4,7 +4,7 @@ let logger;
 
 export default class AuthHandler {
   constructor(private engine: Engine, private user) {
-    logger = engine.log.log('@auth');
+    logger = engine.log.log('service:auth');
   }
 
   get(req, res, next) {

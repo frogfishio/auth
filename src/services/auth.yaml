@@ -3,7 +3,7 @@ info:
   title: Auth service
   description: Service that authenticates users
   version: '1.0.0'
-host: api.cloudfiled.com
+host: localhost
 schemes:
   - https
 basePath: /v1
