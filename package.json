@@ -1,14 +1,14 @@
 {
   "name": "@frogfish/auth",
   "version": "1.0.6",
-  "description": "Auth Service ============",
+  "description": "Kona Auth Service",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp prepare-debug; tsc; mocha --exit --recursive build/debug/test/account",
     "watch": "gulp prepare-debug; tsc -w",
     "build": "gulp build",
     "clean-build": "gulp clean; gulp build",
-    "dist": "gulp build; npm version patch; cd build/release; npm publish --access public"
+    "dist": "npm version patch; gulp clean; gulp build; cd build/release; npm publish; git push origin master --access public"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,34 @@
+system:
+  id: test
+  listen: 0.0.0.0
+  port: 8000
+  root: /vagrant/applications/thai-holiday/api
+  salt: eMxKHk9Hlq9q1xTWgXWpTaAWFbXezmq123EZPjhFFUxUdjim238UhyWuBozNTsyatVwyDf
+
+memory:
+  type: redis
+  model: direct
+  host: localhost
+  port: 6379
+  name: "mymaster"
+  password: "zR2AVhx63n1TNf91ETmB2T9tf5t7c8gn"
+
+db:
+  type: mongo
+  name: test
+  user: testuser
+  password: ItcAaq549VfGp8vNXicMNmMZ
+  host: localhost
+
+cache:
+  type: local # shared
+  expires: 60000 # 24h expiration
+
+services:
+  - /node_modules/@frogfish/auth/services/auth.yaml
+
+handlers:
+  - /node_modules/@frogfish/auth/handlers
+
+auth:
+  bearerTokenTTL: 3600 # default = 3600
