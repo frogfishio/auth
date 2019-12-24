@@ -5,6 +5,7 @@
 *.map
 !gulpfile.js
 !.gitignore
+!.github
 
 /dist
 /build
