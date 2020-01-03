@@ -10,18 +10,18 @@ memory:
   model: direct
   host: localhost
   port: 6379
-  name: "mymaster"
-  password: "zR2AVhx63n1TNf91ETmB2T9tf5t7c8gn"
+  name: ""
+  password: ""
 
 db:
   type: mongo
-  name: test
-  user: testuser
-  password: ItcAaq549VfGp8vNXicMNmMZ
-  host: localhost
+  name: ""
+  user: ""
+  password: ""
+  host: ""
 
 cache:
-  type: local # shared
+  type: global # shared
   expires: 60000 # 24h expiration
 
 services:
