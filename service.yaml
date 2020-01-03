@@ -2,8 +2,8 @@ system:
   id: test
   listen: 0.0.0.0
   port: 8000
-  root: /vagrant/applications/thai-holiday/api
-  salt: eMxKHk9Hlq9q1xTWgXWpTaAWFbXezmq123EZPjhFFUxUdjim238UhyWuBozNTsyatVwyDf
+  root: /app
+  salt: change-for-production
 
 memory:
   type: redis
@@ -25,10 +25,10 @@ cache:
   expires: 60000 # 24h expiration
 
 services:
-  - /node_modules/@frogfish/auth/services/auth.yaml
+  - /auth.yaml
 
 handlers:
-  - /node_modules/@frogfish/auth/handlers
+  - /handlers
 
 auth:
   bearerTokenTTL: 3600 # default = 3600
