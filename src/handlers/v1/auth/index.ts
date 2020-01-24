@@ -40,16 +40,13 @@ export default class AuthHandler {
     const params = req.body;
     const api = this.engine.auth;
     const token = req.header('authorization');
-    const context = req.path.split('/')[3];
 
     if (token) {
       params.token = token.split(' ')[1];
     }
 
-    logger.debug(`Authorising with context ${context} and params ${JSON.stringify(params, null, 2)}`);
-
     api
-      .authenticate(params, context)
+      .authenticate(params)
       .then(data => {
         return res.json(data);
       })

@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "dependencies": {
-    "@frogfish/engine": "^1.0.42"
+    "@frogfish/engine": "^1.0.49"
   },
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
     "mkdirp": "^0.5.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   }
 }
