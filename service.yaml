@@ -10,25 +10,19 @@ memory:
   model: direct
   host: localhost
   port: 6379
-  name: ""
-  password: ""
 
 db:
   type: mongo
-  name: ""
-  user: ""
-  password: ""
-  host: ""
-
-cache:
-  type: global # shared
-  expires: 60000 # 24h expiration
-
-services:
-  - /auth.yaml
-
-handlers:
-  - /handlers
+  host: localhost
 
 auth:
-  bearerTokenTTL: 3600 # default = 3600
+  bearerTokenTTL: 3600 # default
+
+registry:
+  services:
+    auth-service:
+      name: Auth service
+      specs:
+        - /auth.yaml
+      handlers:
+        - /handlers
