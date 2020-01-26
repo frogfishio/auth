@@ -32,7 +32,15 @@ export default class AuthHandler {
         res.json(data);
       })
       .catch(err => {
-        err.send(res);
+        if (err & err.send) {
+          err.send(res);
+        } else {
+          res.status(500).json({
+            error: 'system_error',
+            error_description: 'System error has occured and administrator notified',
+            trace: 'svc_auth_get'
+          });
+        }
       });
   }
 
@@ -51,8 +59,15 @@ export default class AuthHandler {
         return res.json(data);
       })
       .catch(err => {
-        console.log(err);
-        return err.send(res);
+        if (err & err.send) {
+          err.send(res);
+        } else {
+          res.status(500).json({
+            error: 'system_error',
+            error_description: 'System error has occured and administrator notified',
+            trace: 'svc_auth_post'
+          });
+        }
       });
   }
 }

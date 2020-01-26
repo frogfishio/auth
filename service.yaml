@@ -26,3 +26,20 @@ registry:
         - /auth.yaml
       handlers:
         - /handlers
+
+#TODO: decouple, auth should load user by default
+user:
+  defaultRole: member
+  adminRole: admin
+  passwordLength: 8
+  meta:
+    fname:
+      mandatory: true
+      message: Missing first name
+    lname:
+      mandatory: true
+      message: Missing last name
+    username:
+      mandatory: false
+    avatar:
+      mandatory: false

@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "dependencies": {
-    "@frogfish/engine": "^1.0.49"
+    "@frogfish/engine": "^1.0.50"
   },
   "devDependencies": {
     "del": "^5.1.0",
