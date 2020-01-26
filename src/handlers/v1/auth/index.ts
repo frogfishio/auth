@@ -35,6 +35,7 @@ export default class AuthHandler {
         if (err & err.send) {
           err.send(res);
         } else {
+          logger.error(err);
           res.status(500).json({
             error: 'system_error',
             error_description: 'System error has occured and administrator notified',
@@ -62,6 +63,7 @@ export default class AuthHandler {
         if (err & err.send) {
           err.send(res);
         } else {
+          logger.error(err);
           res.status(500).json({
             error: 'system_error',
             error_description: 'System error has occured and administrator notified',
