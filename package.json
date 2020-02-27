@@ -6,7 +6,7 @@
   "scripts": {
     "test": "gulp prepare-debug; tsc; mocha --exit --recursive build/debug/test/account",
     "watch": "gulp prepare-debug; tsc -w",
-    "start": "mkdir -p build/debug/src; cp src/services/auth.yaml build/debug/src; DEBUG=engine*,svc:*  tsc-watch --onSuccess \"node node_modules/@frogfish/engine/engine -c service.yaml --root $PWD/build/debug/src\"",
+    "start": "mkdir -p build/debug/src; cp src/services/auth.yaml build/debug/src; DEBUG=engine*,svc:*  tsc-watch --onSuccess \"node node_modules/@frogfish/kona/engine -c service.yaml --root $PWD/build/debug/src\"",
     "build": "gulp build",
     "clean-build": "gulp clean; gulp build",
     "dist": "npm version patch; gulp clean; gulp build; cd build/release; npm publish --access public; git push origin master"
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "dependencies": {
-    "@frogfish/engine": "^2.0.3"
+    "@frogfish/kona": "^2.0.6"
   },
   "devDependencies": {
     "del": "^5.1.0",
