@@ -11,7 +11,7 @@ jobs:
     - name: Cleanup
       run: rm -rf ~/.npm
     - name: Cleanup 2
-      run: npm cache clean
+      run: npm cache clean --force
     - name: Install packages
       run: npm install --no-bin-links
     - run: mkdir -p build/release
