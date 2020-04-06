@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "dependencies": {
-    "@frogfish/kona": "^2.0.11"
+    "@frogfish/kona": "^2.0.12"
   },
   "devDependencies": {
     "del": "^5.1.0",
