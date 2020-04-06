@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 COPY build/release /app
 COPY node_modules /app/node_modules
 COPY service.yaml /app
