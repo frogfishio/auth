@@ -13,7 +13,7 @@ export default class AuthHandler {
     if (!token) {
       return res.status(401).json({
         error: 'invalid_request',
-        error_description: 'Missing bearer token'
+        error_description: 'Missing bearer token',
       });
     }
 
@@ -21,17 +21,17 @@ export default class AuthHandler {
 
     api
       .resolve(token)
-      .then(data => {
+      .then((data) => {
         if (!data) {
           return res.status(401).json({
             error: 'invalid_request',
-            error_description: 'Token could not be resolved'
+            error_description: 'Token could not be resolved',
           });
         }
 
         res.json(data);
       })
-      .catch(err => {
+      .catch((err) => {
         if (err & err.send) {
           err.send(res);
         } else {
@@ -39,7 +39,7 @@ export default class AuthHandler {
           res.status(500).json({
             error: 'system_error',
             error_description: 'System error has occured and administrator notified',
-            trace: 'svc_auth_get'
+            trace: 'svc_auth_get',
           });
         }
       });
@@ -56,18 +56,22 @@ export default class AuthHandler {
 
     api
       .authenticate(params)
-      .then(data => {
+      .then((data) => {
         return res.json(data);
       })
-      .catch(err => {
+      .catch((err) => {
         if (err & err.send) {
           err.send(res);
         } else {
+          if (err && err.error === 'not_found') {
+            return res.status(404).json(err);
+          }
+          
           logger.error(err);
           res.status(500).json({
             error: 'system_error',
             error_description: 'System error has occured and administrator notified',
-            trace: 'svc_auth_post'
+            trace: 'svc_auth_post',
           });
         }
       });
