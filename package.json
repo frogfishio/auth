@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "dependencies": {
-    "@frogfish/kona": "^2.1.1"
+    "@frogfish/kona": "^2.1.22"
   },
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
     "mkdirp": "^0.5.5",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   }
 }
