@@ -32,7 +32,7 @@ export default class AuthHandler {
         res.json(data);
       })
       .catch((err) => {
-        if (err & err.send) {
+        if (err && err.send) {
           err.send(res);
         } else {
           logger.error(err);
@@ -60,13 +60,13 @@ export default class AuthHandler {
         return res.json(data);
       })
       .catch((err) => {
-        if (err & err.send) {
+        if (err && err.send) {
           err.send(res);
         } else {
           if (err && err.error === 'not_found') {
             return res.status(404).json(err);
           }
-          
+
           logger.error(err);
           res.status(500).json({
             error: 'system_error',
