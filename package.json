@@ -1,6 +1,6 @@
 {
   "name": "@frogfish/auth",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Kona Auth Service",
   "main": "gulpfile.js",
   "scripts": {
