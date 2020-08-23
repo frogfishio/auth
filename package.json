@@ -29,6 +29,6 @@
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
     "mkdirp": "^0.5.5",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.7"
   }
 }
