@@ -1,6 +1,6 @@
 {
   "name": "@frogfish/auth",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Kona Auth Service",
   "main": "gulpfile.js",
   "scripts": {
@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/frogfishio/auth#readme",
   "devDependencies": {
-    "del": "^5.1.0",
+    "del": "^7.0.0",
     "gulp": "^4.0.2",
-    "gulp-typescript": "^5.0.1",
-    "mkdirp": "^0.5.5",
-    "typescript": "^3.9.7"
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "mkdirp": "^3.0.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@frogfish/kona": "^3.0.6"
+    "@frogfish/kona": "^4.0.1"
   }
 }
